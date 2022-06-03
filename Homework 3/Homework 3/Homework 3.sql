@@ -16,9 +16,3 @@ SELECT StudentID, FirstName, LastName, COUNT(Grade) AS GradePerStudent FROM [Gra
 GROUP BY StudentID, FirstName, LastName
 
 SELECT * FROM vv_StudentGrades ORDER BY GradePerStudent DESC;
-
-
-
-
-SELECT StudentID, FirstName, LastName, AVG(Grade) AS MaxGradeEqualToAverageGrade FROM [Grade] JOIN [Student] ON StudentID = [Student].ID GROUP BY StudentID, FirstName, LastName HAVING MAX(Grade) = AVG(Grade);
-
